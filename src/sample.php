@@ -39,16 +39,16 @@
            }
            // Utility data dump function
            function output() {
-                echo "Programmer Name: ".$this->name."<br>";
-                echo $this->name." has ".$this->experience." years of programming experience.<br>";
-                echo $this->lang." is ".$this->name."'s favorite programming language.<br>";
-                echo $this->name." holds the degree: ".$this->education."<br><br>";
+                echo "Programmer Name: ".$this->name."\n";
+                echo $this->name." has ".$this->experience." years of programming experience.\n";
+                echo $this->lang." is ".$this->name."'s favorite programming language.\n";
+                echo $this->name." holds the degree: ".$this->education."\n\n";
            }
       }
       // Instantiating a programmer
-      $paul = new Programmer('Paul Conrad',12,'C++','Bachelor of Science in Computer Science');
-      $paul->output();
-      // Oops, Paul has programmed alot longer than 12 year, really is 22 years
-      $paul->set_experience(22);
-      $paul->output();
+//      $paul = new Programmer('Paul Conrad',12,'C++','Bachelor of Science in Computer Science');
+//      $paul->output();
+//      // Oops, Paul has programmed alot longer than 12 year, really is 22 years
+//      $paul->set_experience(22);
+//      $paul->output();
  ?>
