@@ -115,16 +115,11 @@
  </target>
 
  <target name="phpdox" description="Generate API documentation using phpDox">
-  <exec executable="/opt/phpdox/phpdox.php"/>
+  <exec executable="phpdox"/>
  </target>
 
  <target name="phpunit" description="Run unit tests with PHPUnit">
-    <exec dir="."
-      command="phpunit --log-junit '${basedir}/build/reports/unitreport.xml'
-                       --coverage-html '${basedir}/build/reports/coverage'
-                       --coverage-clover '${basedir}/build/logs/clover.xml'
-                       ${basedir}/tests/*.php"
-    />
+  <exec executable="phpunit" failonerror="true"/>
  </target>
 
  <target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
