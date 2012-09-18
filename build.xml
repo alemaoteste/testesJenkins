@@ -123,7 +123,7 @@
       command="phpunit --log-junit 'reports/unitreport.xml'
                        --coverage-html 'reports/coverage'
                        --coverage-clover 'logs/clover.xml'
-                       tests/"
+                       tests/*.php"
     />
  </target>
  
