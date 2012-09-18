@@ -46,10 +46,12 @@
     <modified />
    </fileset>
 
+<!-- comentado para não aplicar teste nos testes !
    <fileset dir="${basedir}/tests">
     <include name="**/*.php" />
     <modified />
    </fileset>
+-->
   </apply>
  </target>
 
