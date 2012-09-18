@@ -120,21 +120,12 @@
 
  <target name="phpunit" description="Run unit tests with PHPUnit">
     <exec dir="."
-      command="phpunit --log-junit 'reports/unitreport.xml'
-                       --coverage-html 'reports/coverage'
-                       --coverage-clover 'logs/clover.xml'
-                       tests/*.php"
+      command="phpunit --log-junit '${basedir}/build/reports/unitreport.xml'
+                       --coverage-html '${basedir}/build/reports/coverage'
+                       --coverage-clover '${basedir}/build/logs/clover.xml'
+                       ${basedir}/tests/*.php"
     />
  </target>
- 
-<!-- <phpunit printsummary="true" codecoverage="true">
-    <formatter todir="logs" type="xml" outfile="/clover.xml" />
-    <batchtest>
-        <fileset dir="test">
-            <include name="**/tests/*.php" />
-        </fileset>
-    </batchtest>
-</phpunit>-->
 
  <target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
   <exec executable="phpcb">
