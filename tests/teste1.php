@@ -1,5 +1,4 @@
 <?php
-define ( 'TESTS_PATH',  dirname($argv[0]) . DIRECTORY_SEPARATOR );
 require_once( TESTS_PATH . 'simpletest/autorun.php');
 require_once( TESTS_PATH . '../src/sample.php');
 
