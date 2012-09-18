@@ -118,9 +118,18 @@
   <exec executable="/opt/phpdox/phpdox.php"/>
  </target>
 
- <target name="phpunit" description="Run unit tests with PHPUnit">
+<!-- <target name="phpunit" description="Run unit tests with PHPUnit">
   <exec executable="phpunit" failonerror="true"/>
- </target>
+ </target>-->
+ 
+ <phpunit printsummary="true" codecoverage="true">
+    <formatter todir="logs" type="xml" outfile="/clover.xml" />
+    <batchtest>
+        <fileset dir="test">
+            <include name="**/tests/*.php" />
+        </fileset>
+    </batchtest>
+</phpunit>
 
  <target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
   <exec executable="phpcb">
