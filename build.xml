@@ -119,14 +119,9 @@
  </target>
 
  <target name="phpunit" description="Run unit tests with PHPUnit">
-<!--  <exec executable="phpunit" failonerror="true"/>-->
-  
-  
      <exec executable="phpunit" dir="${basedir}" failonerror="on">
-      <arg line="--log-xml ${basedir}/build/logs/phpunit.xml 
-                 --log-pmd ${basedir}/build/logs/phpunit.pmd.xml  
-                 --log-metrics ${basedir}/build/logs/phpunit.metrics.xml 
-                 --coverage-xml  ${basedir}/build/logs/phpunit.coverage.xml 
+      <arg line="--log-junit ${basedir}/build/logs/junit.xml 
+                 --coverage-clover  ${basedir}/build/logs/clover.xml 
                  --coverage-html ${basedir}/build/coverage
                  phpucAllTests tests/testeunit.php" />
      </exec>
