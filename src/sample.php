@@ -45,10 +45,4 @@
                 echo $this->name." holds the degree: ".$this->education."\n\n";
            }
       }
-      // Instantiating a programmer
-//      $paul = new Programmer('Paul Conrad',12,'C++','Bachelor of Science in Computer Science');
-//      $paul->output();
-//      // Oops, Paul has programmed alot longer than 12 year, really is 22 years
-//      $paul->set_experience(22);
-//      $paul->output();
  ?>
